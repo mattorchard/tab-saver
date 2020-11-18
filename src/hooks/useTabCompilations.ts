@@ -4,9 +4,11 @@ import useLiveCallback from "./useLiveCallback";
 import useChromeStorage from "./useChromeStorage";
 import { createTabs } from "../helpers/tabHelpers";
 import { exportTabCompilation } from "../helpers/exportHelpers";
+
 export type TabCompilation = {
   id: string;
   tabs: Tab[];
+  title?: string;
   savedAt: number;
   downloadedAt?: number;
   openedAt?: number;
@@ -50,6 +52,11 @@ const useTabCompilations = () => {
     setTabCompilation({ id: randomId(), savedAt: Date.now(), tabs })
   );
 
+  const setCompilationTitle = useLiveCallback(
+    (compilationId: string, title?: string) =>
+      setTabCompilation({ id: compilationId, title })
+  );
+
   const deleteCompilation = useLiveCallback(compilationId => {
     const filteredCompilations = { ...tabCompilations };
     delete filteredCompilations[compilationId];
@@ -62,7 +69,8 @@ const useTabCompilations = () => {
     openCompilation,
     downloadCompilation,
     saveCompilation,
-    deleteCompilation
+    deleteCompilation,
+    setCompilationTitle
   };
 };
 

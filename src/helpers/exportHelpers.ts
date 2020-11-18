@@ -3,6 +3,10 @@ import { toCsv } from "./csvHelpers";
 import { downloadBlob } from "./downloadHelpers";
 
 const getFilename = (tabCompilation: TabCompilation) => {
+  if (tabCompilation.title) {
+    // Chrome deals wih weird chars in the filename already
+    return `${tabCompilation.title}.csv`;
+  }
   const savedAt = new Date(tabCompilation.savedAt);
   const isoDate = savedAt.toISOString().substring(0, 10);
   return `${tabCompilation.tabs.length}-tabs-from-${isoDate}.csv`;

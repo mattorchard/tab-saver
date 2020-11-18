@@ -3,6 +3,7 @@ import { TabCompilation } from "../hooks/useTabCompilations";
 import Tab = chrome.tabs.Tab;
 import Icon from "./Icon";
 import { useTabCompilationsContext } from "../contexts/TabCompilationsContext";
+import TitleInput from "./TitleInput";
 
 const TabSummary: FC<{ tab: Tab }> = ({ tab }) => (
   <a
@@ -25,17 +26,11 @@ const TabCompilationSummary: FC<{ compilation: TabCompilation }> = ({
     downloadCompilation,
     deleteCompilation
   } = useTabCompilationsContext();
-  const savedAt = new Date(compilation.savedAt);
+
   return (
     <div class="tab-compilation-summary">
       <header class="tab-compilation-summary__header">
-        <h2>
-          {compilation.tabs.length} Tabs{" "}
-          <time dateTime={savedAt.toISOString()}>
-            {savedAt.toLocaleString("en-ca")}
-          </time>
-        </h2>
-
+        <TitleInput compilation={compilation} />
         <button
           type="button"
           class="neu icon-button"
