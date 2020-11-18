@@ -4,7 +4,7 @@ import { downloadBlob } from "./downloadHelpers";
 
 const getFilename = (tabCompilation: TabCompilation) => {
   const savedAt = new Date(tabCompilation.savedAt);
-  const isoDate = savedAt.toISOString().substring(10);
+  const isoDate = savedAt.toISOString().substring(0, 10);
   return `${tabCompilation.tabs.length}-tabs-from-${isoDate}.csv`;
 };
 

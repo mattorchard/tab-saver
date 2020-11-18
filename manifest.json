@@ -1,7 +1,7 @@
 {
   "name": "Tab Saver",
   "short_name": "Tab Saver",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Allows saving and re-opening tabs",
   "icons": {},
   "permissions": ["tabs", "storage"],
