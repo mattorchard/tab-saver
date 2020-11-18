@@ -11,8 +11,8 @@ const queryTabs = (queryInfo: QueryInfo): Promise<Tab[]> =>
 export const getAllTabs = () => queryTabs({});
 
 export const getTabsInCurrentWindow = async () => {
-  const currentWindow = await getCurrentWindow();
-  return await queryTabs({ windowId: currentWindow.id });
+  const { id: windowId } = await getCurrentWindow();
+  return await queryTabs({ windowId });
 };
 
 const createWindow = (): Promise<Window> =>
@@ -21,12 +21,26 @@ const createWindow = (): Promise<Window> =>
 const createTab = (tabProperties: chrome.tabs.CreateProperties): Promise<Tab> =>
   new Promise(resolve => chrome.tabs.create(tabProperties, resolve));
 
+const updateTab = (
+  tabId: number,
+  tabProperties: chrome.tabs.UpdateProperties
+): Promise<Tab> =>
+  new Promise(resolve => chrome.tabs.update(tabId, tabProperties, resolve));
+
 export const createTabs = async (tabs: Tab[], newWindow: boolean) => {
-  if (newWindow) {
-    // Todo: Get and replace first new tab in new window
-    const { id: windowId } = await createWindow();
-    await Promise.all(tabs.map(tab => createTab({ url: tab.url, windowId })));
-  } else {
-    await Promise.all(tabs.map(tab => createTab({ url: tab.url })));
+  if (!newWindow) {
+    return await Promise.all(tabs.map(tab => createTab({ url: tab.url })));
   }
+
+  const { id: windowId } = await createWindow();
+  // Get the empty tab created with the new window
+  const [firstTabInNewWindow] = await queryTabs({ windowId });
+  const [firstTabToCreate, ...otherTabsToCreate] = tabs;
+
+  return await Promise.all([
+    // Set the first tab's url
+    updateTab(firstTabInNewWindow.id!, { url: firstTabToCreate.url }),
+    // Create tabs for the rest of the URlS
+    ...otherTabsToCreate.map(tab => createTab({ url: tab.url, windowId }))
+  ]);
 };
