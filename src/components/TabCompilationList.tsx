@@ -24,8 +24,6 @@ const TabCompilationList: FC = () => {
     return searchCompilations(compilationsSorted, query);
   }, [compilationsSorted, query]);
 
-  console.log(compilationsFiltered, query);
-
   return (
     <section>
       <div className="tab-compilation-list-header">

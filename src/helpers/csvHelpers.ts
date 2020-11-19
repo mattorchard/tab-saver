@@ -18,7 +18,6 @@ const splitIntoCells = (text: string) => {
   let cells: string[] = [];
   let buffer = text;
   while (buffer.length > 0) {
-    console.debug("Buffer", buffer);
     if (buffer.charAt(0) === `"`) {
       const [cell, rest] = splitAtFirst(buffer.substring(1), `"`);
       cells.push(cell);
