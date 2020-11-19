@@ -34,7 +34,7 @@ const AppHeader: FC = () => {
   };
 
   return (
-    <header class="save-section">
+    <header class="save-header">
       <h1>Tab Saver</h1>
       <button class="neu" type="button" onClick={saveWindow}>
         <Icon name="save-outline" /> Window
