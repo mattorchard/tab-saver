@@ -134,6 +134,7 @@ button.neu:focus {
 }
 ::-webkit-scrollbar {
   background-color: transparent;
+  width: 0.5rem;
 }
 ::-webkit-scrollbar-track {
   background-color: var(--dark-red);
@@ -180,4 +181,34 @@ button.neu:focus {
 }
 .tab-compilation-list-header {
   margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.search-input__container {
+  display: inline-flex;
+  border-radius: 0.5rem;
+  border: rgba(255, 255, 255, 0.6) solid 1px;
+}
+.search-input {
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+.search-input::-webkit-search-cancel-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+.search-input > svg {
+  height: 1rem;
+}
+.search-input:focus {
+  outline: none;
+}
+.search-input__container:focus-within {
+  border-color: var(--blue);
+}
+.no-results-message {
+  font-size: 1rem;
+  text-align: center;
 }

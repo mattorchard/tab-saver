@@ -34,12 +34,12 @@ const AppHeader: FC = () => {
   };
 
   return (
-    <header class="save-header">
+    <header className="save-header">
       <h1>Tab Saver</h1>
-      <button class="neu" type="button" onClick={saveWindow}>
+      <button className="neu" type="button" onClick={saveWindow}>
         <Icon name="save-outline" /> Window
       </button>
-      <button class="neu" type="button" onClick={saveAll}>
+      <button className="neu" type="button" onClick={saveAll}>
         <Icon name="save" /> All
       </button>
 
@@ -49,7 +49,7 @@ const AppHeader: FC = () => {
         onfocusout={handleFocusOut}
       >
         <button
-          class="neu icon-button"
+          className="neu icon-button"
           title="Toggle drawer"
           onClick={() => setIsDrawerOpen(!isDrawerOpen)}
         >
@@ -58,21 +58,21 @@ const AppHeader: FC = () => {
         {isDrawerOpen && (
           <div role="menu" className="drawer" aria-hidden={!isDrawerOpen}>
             <button
-              class="neu icon-button"
+              className="neu icon-button"
               title="Upload file"
               onClick={upload}
             >
               <Icon name="file-upload" />
             </button>
             <button
-              class="neu icon-button"
+              className="neu icon-button"
               title="Upload file"
               onClick={upload}
             >
               <Icon name="file-upload" />
             </button>
             <button
-              class="neu icon-button"
+              className="neu icon-button"
               title="Upload file"
               onClick={upload}
             >

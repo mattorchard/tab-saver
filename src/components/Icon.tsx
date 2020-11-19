@@ -7,7 +7,7 @@ const IconMap = {
       focusable="false"
       data-prefix="fas"
       data-icon="window-close"
-      class="svg-inline--fa fa-window-close fa-w-16"
+      className="svg-inline--fa fa-window-close fa-w-16"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
@@ -24,7 +24,7 @@ const IconMap = {
       focusable="false"
       data-prefix="fas"
       data-icon="window-restore"
-      class="svg-inline--fa fa-window-restore fa-w-16"
+      className="svg-inline--fa fa-window-restore fa-w-16"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
@@ -41,7 +41,7 @@ const IconMap = {
       focusable="false"
       data-prefix="fas"
       data-icon="download"
-      class="svg-inline--fa fa-download fa-w-16"
+      className="svg-inline--fa fa-download fa-w-16"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
@@ -58,7 +58,7 @@ const IconMap = {
       focusable="false"
       data-prefix="fas"
       data-icon="external-link-square-alt"
-      class="svg-inline--fa fa-external-link-square-alt fa-w-14"
+      className="svg-inline--fa fa-external-link-square-alt fa-w-14"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
@@ -75,7 +75,7 @@ const IconMap = {
       focusable="false"
       data-prefix="fas"
       data-icon="save"
-      class="svg-inline--fa fa-save fa-w-14"
+      className="svg-inline--fa fa-save fa-w-14"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
@@ -92,7 +92,7 @@ const IconMap = {
       focusable="false"
       data-prefix="fas"
       data-icon="file-upload"
-      class="svg-inline--fa fa-file-upload fa-w-12"
+      className="svg-inline--fa fa-file-upload fa-w-12"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 384 512"
@@ -109,7 +109,7 @@ const IconMap = {
       focusable="false"
       data-prefix="far"
       data-icon="save"
-      class="svg-inline--fa fa-save fa-w-14"
+      className="svg-inline--fa fa-save fa-w-14"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
@@ -126,7 +126,7 @@ const IconMap = {
       focusable="false"
       data-prefix="fas"
       data-icon="chevron-circle-down"
-      class="svg-inline--fa fa-chevron-circle-down fa-w-16"
+      className="svg-inline--fa fa-chevron-circle-down fa-w-16"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
@@ -143,7 +143,7 @@ const IconMap = {
       focusable="false"
       data-prefix="fas"
       data-icon="sort-alpha-down"
-      class="svg-inline--fa fa-sort-alpha-down fa-w-14"
+      className="svg-inline--fa fa-sort-alpha-down fa-w-14"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
@@ -151,6 +151,23 @@ const IconMap = {
       <path
         fill="currentColor"
         d="M176 352h-48V48a16 16 0 0 0-16-16H80a16 16 0 0 0-16 16v304H16c-14.19 0-21.36 17.24-11.29 27.31l80 96a16 16 0 0 0 22.62 0l80-96C197.35 369.26 190.22 352 176 352zm240-64H288a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h56l-61.26 70.45A32 32 0 0 0 272 446.37V464a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16h-56l61.26-70.45A32 32 0 0 0 432 321.63V304a16 16 0 0 0-16-16zm31.06-85.38l-59.27-160A16 16 0 0 0 372.72 32h-41.44a16 16 0 0 0-15.07 10.62l-59.27 160A16 16 0 0 0 272 224h24.83a16 16 0 0 0 15.23-11.08l4.42-12.92h71l4.41 12.92A16 16 0 0 0 407.16 224H432a16 16 0 0 0 15.06-21.38zM335.61 144L352 96l16.39 48z"
+      />
+    </svg>
+  ),
+  times: (
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      data-prefix="fas"
+      data-icon="times-circle"
+      className="svg-inline--fa fa-times-circle fa-w-16"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+    >
+      <path
+        fill="currentColor"
+        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"
       />
     </svg>
   )

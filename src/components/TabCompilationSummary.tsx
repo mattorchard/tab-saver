@@ -7,14 +7,14 @@ import TitleInput from "./TitleInput";
 
 const TabSummary: FC<{ tab: Tab }> = ({ tab }) => (
   <a
-    class="tab-summary"
+    className="tab-summary"
     href={tab.url}
     target="_blank"
     rel="noreferrer noopener"
     title={tab.title}
   >
     {tab.favIconUrl && <img src={tab.favIconUrl} alt="" className="favicon" />}
-    <span class="ellipses">{tab.title}</span>
+    <span className="ellipses">{tab.title}</span>
   </a>
 );
 
@@ -28,12 +28,12 @@ const TabCompilationSummary: FC<{ compilation: TabCompilation }> = ({
   } = useTabCompilationsContext();
 
   return (
-    <div class="tab-compilation-summary neu">
-      <header class="tab-compilation-summary__header">
+    <div className="tab-compilation-summary neu">
+      <header className="tab-compilation-summary__header">
         <TitleInput compilation={compilation} />
         <button
           type="button"
-          class="neu icon-button"
+          className="neu icon-button"
           title="Open in this window"
           onClick={() => openCompilation(compilation.id, false)}
         >
@@ -41,7 +41,7 @@ const TabCompilationSummary: FC<{ compilation: TabCompilation }> = ({
         </button>
         <button
           type="button"
-          class="neu icon-button"
+          className="neu icon-button"
           title="Open in new window"
           onClick={() => openCompilation(compilation.id, true)}
         >
@@ -49,7 +49,7 @@ const TabCompilationSummary: FC<{ compilation: TabCompilation }> = ({
         </button>
         <button
           type="button"
-          class="neu icon-button"
+          className="neu icon-button"
           title="Download"
           onClick={() => downloadCompilation(compilation.id)}
         >
@@ -57,7 +57,7 @@ const TabCompilationSummary: FC<{ compilation: TabCompilation }> = ({
         </button>
         <button
           type="button"
-          class="neu icon-button"
+          className="neu icon-button"
           title="Delete"
           onClick={() => deleteCompilation(compilation.id)}
         >
