@@ -48,8 +48,8 @@ const useTabCompilations = () => {
     setTabCompilation({ id: compilationId, downloadedAt: Date.now() });
   });
 
-  const saveCompilation = useLiveCallback((tabs: Tab[]) =>
-    setTabCompilation({ id: randomId(), savedAt: Date.now(), tabs })
+  const saveCompilation = useLiveCallback((tabs: Tab[], title?: string) =>
+    setTabCompilation({ id: randomId(), savedAt: Date.now(), tabs, title })
   );
 
   const setCompilationTitle = useLiveCallback(

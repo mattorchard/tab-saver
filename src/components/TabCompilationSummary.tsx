@@ -28,7 +28,7 @@ const TabCompilationSummary: FC<{ compilation: TabCompilation }> = ({
   } = useTabCompilationsContext();
 
   return (
-    <div class="tab-compilation-summary">
+    <div class="tab-compilation-summary neu">
       <header class="tab-compilation-summary__header">
         <TitleInput compilation={compilation} />
         <button

@@ -1,6 +1,6 @@
 import { TabCompilation } from "../hooks/useTabCompilations";
 import { toCsv } from "./csvHelpers";
-import { downloadBlob } from "./downloadHelpers";
+import { downloadBlob } from "./fileHelpers";
 
 const getFilename = (tabCompilation: TabCompilation) => {
   if (tabCompilation.title) {

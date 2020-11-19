@@ -1,5 +1,4 @@
-import { getAllTabs } from "./helpers/tabHelpers";
-import SaveSection from "./components/SaveSection";
+import AppHeader from "./components/AppHeader";
 import "./globals.css";
 import useTabCompilations from "./hooks/useTabCompilations";
 import { TabCompilationsContext } from "./contexts/TabCompilationsContext";
@@ -11,7 +10,7 @@ const App = () => {
   return (
     <TabCompilationsContext.Provider value={contextValue}>
       <main>
-        <SaveSection />
+        <AppHeader />
         <TabCompilationList />
       </main>
     </TabCompilationsContext.Provider>
